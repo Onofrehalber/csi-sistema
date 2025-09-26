@@ -1,0 +1,66 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="mb-4"><i class="fas fa-file-invoice-dollar me-2"></i>Cotizaciones</h2>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <button class="btn btn-warning" id="btn-new-quote">
+                <i class="fas fa-plus me-2"></i>Nueva Cotización
+            </button>
+            <button class="btn btn-outline-secondary" id="btn-export-quotes">
+                <i class="fas fa-file-csv me-2"></i>Exportar CSV
+            </button>
+        </div>
+        <div class="col-md-6">
+            <input type="text" id="search-quotes" class="form-control" placeholder="Buscar cotización...">
+        </div>
+    </div>
+
+    <div id="quotes-list">
+        <!-- Aquí se cargarán las cotizaciones dinámicamente -->
+    </div>
+
+    <!-- Modal para crear/editar cotización -->
+    <div id="quote-modal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Nueva Cotización</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="form-quote">
+                        <div class="mb-3">
+                            <label>Cliente</label>
+                            <select id="quote-client" class="form-select" required></select>
+                        </div>
+                        <div class="mb-3">
+                            <label>Descripción</label>
+                            <textarea id="quote-description" class="form-control" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label>Monto Total</label>
+                            <input type="number" id="quote-total" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label>Estado</label>
+                            <select id="quote-status" class="form-select" required>
+                                <option value="Pendiente">Pendiente</option>
+                                <option value="Aprobada">Aprobada</option>
+                                <option value="Rechazada">Rechazada</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label>Notas Internas</label>
+                            <textarea id="quote-notes" class="form-control"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-warning w-100">Guardar Cotización</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

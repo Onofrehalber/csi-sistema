@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Integral - CSI Refrigeración</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body class="csi-body">
+    <!-- Header Principal -->
+    <header class="csi-header" id="csi-header" style="display: none;">
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <span class="navbar-brand mb-0 h1">
+                    <i class="fas fa-snowflake me-2"></i>
+                    SISTEMA INTEGRAL - CSI REFRIGERACIÓN
+                </span>
+                <div class="d-flex">
+                    <span class="navbar-text text-white me-3">
+                        <i class="fas fa-user me-1"></i> 
+                        <span id="current-user">Usuario</span>
+                    </span>
+                    <button class="btn btn-outline-light btn-sm" onclick="CSI.logout()">
+                        <i class="fas fa-sign-out-alt me-1"></i> Salir
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container-fluid" id="csi-main-container" style="display: none;">
+        <div class="row">
+            <!-- Sidebar de Módulos -->
+            <nav class="col-md-3 col-lg-2 csi-sidebar">
+                <div class="csi-module-list">
+                    <!-- Dashboard -->
+                    <div class="csi-module-item active" data-module="dashboard">
+                        <i class="fas fa-tachometer-alt me-2"></i>
+                        Dashboard Principal
+                    </div>
+
+                    <!-- Módulo CRM -->
+                    <div class="csi-module-item" data-module="crm">
+                        <i class="fas fa-users me-2"></i>
+                        CRM Comercial
+                    </div>
+
+                    <!-- Módulo Técnico -->
+                    <div class="csi-module-item" data-module="technical">
+                        <i class="fas fa-tools me-2"></i>
+                        Herramientas Técnicas
+                    </div>
+
+                    <!-- Módulo Configuración (solo admin) -->
+                    <div class="csi-module-item" data-module="config">
+                        <i class="fas fa-cog me-2"></i>
+                        Configuración
+                    </div>
+
+                    <!-- Módulos Futuros -->
+                    <div class="csi-module-item coming-soon">
+                        <i class="fas fa-calculator me-2"></i>
+                        Módulo Financiero
+                        <span class="badge bg-secondary ms-2">Próximo</span>
+                    </div>
+
+                    <div class="csi-module-item coming-soon">
+                        <i class="fas fa-chart-line me-2"></i>
+                        Business Intelligence
+                        <span class="badge bg-secondary ms-2">Próximo</span>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Contenido Principal -->
+            <main class="col-md-9 col-lg-10 csi-main-content">
+                <div id="csi-module-content">
+                    <!-- Aquí se carga dinámicamente cada módulo -->
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Pantalla de Login -->
+    <div id="csi-login-container" class="csi-login-container">
+        <div class="csi-login-box">
+            <div class="text-center mb-4">
+                <i class="fas fa-snowflake fa-3x text-primary mb-3"></i>
+                <h2>CSI Refrigeración</h2>
+                <p class="text-muted">Sistema Integral de Gestión</p>
+            </div>
+            
+            <form id="login-form">
+                <div class="mb-3">
+                    <label class="form-label">Usuario</label>
+                    <input type="text" class="form-control" id="username" placeholder="Ingresa tu usuario" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">
+                    <i class="fas fa-sign-in-alt me-2"></i>Ingresar al Sistema
+                </button>
+            </form>
+
+            <!-- Usuarios de prueba -->
+            <div class="mt-4 p-3 bg-light rounded">
+                <h6 class="text-center">Usuarios de Prueba:</h6>
+                <div class="small">
+                    <div><strong>Admin:</strong> usuario: <code>admin</code> / contraseña: <code>admin</code></div>
+                    <div><strong>Usuario Normal:</strong> usuario: <code>usuario1</code> / contraseña: <code>1234</code></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/core.js"></script>
+</body>
+</html>

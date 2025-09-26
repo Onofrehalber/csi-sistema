@@ -1,0 +1,18 @@
+[
+    {
+        "code": "CSI-COT-001",
+        "client": "Cliente Ejemplo 1",
+        "description": "Suministro e instalación de equipo de refrigeración industrial",
+        "total": 45000,
+        "status": "Pendiente",
+        "notes": "Revisar disponibilidad de equipo antes de enviar"
+    },
+    {
+        "code": "CSI-COT-002",
+        "client": "Cliente Ejemplo 2",
+        "description": "Mantenimiento preventivo mensual",
+        "total": 8000,
+        "status": "Aprobada",
+        "notes": ""
+    }
+]

@@ -1,0 +1,165 @@
+/* ===== ESTILOS PRINCIPALES CSI REFRIGERACIÓN ===== */
+:root {
+    /* COLORES OFICIALES CSI */
+    --csi-red: #ce2d43;
+    --csi-blue: #234b79;
+    --csi-gray: #606a72;
+    --csi-light: #f8f9fa;
+    --csi-dark: #343a40;
+}
+
+.csi-body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* ===== HEADER ===== */
+.csi-header {
+    background: linear-gradient(135deg, var(--csi-blue) 0%, var(--csi-red) 100%) !important;
+    border-bottom: 3px solid var(--csi-red);
+}
+
+.csi-header .navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+/* ===== SIDEBAR ===== */
+.csi-sidebar {
+    background: linear-gradient(180deg, var(--csi-blue) 0%, #1a3a6b 100%);
+    min-height: calc(100vh - 76px);
+    padding: 0;
+    box-shadow: 3px 0 10px rgba(0,0,0,0.1);
+}
+
+.csi-module-list {
+    padding: 20px 0;
+}
+
+.csi-module-item {
+    padding: 15px 25px;
+    color: white !important;
+    text-decoration: none;
+    border-left: 4px solid transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: block;
+    margin: 5px 0;
+}
+
+.csi-module-item:hover {
+    background-color: rgba(255,255,255,0.1);
+    border-left-color: var(--csi-red);
+    padding-left: 30px;
+}
+
+.csi-module-item.active {
+    background-color: var(--csi-red);
+    border-left-color: white;
+    font-weight: 600;
+}
+
+.csi-module-item.coming-soon {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+.csi-main-content {
+    background-color: white;
+    min-height: calc(100vh - 76px);
+    padding: 30px;
+}
+
+/* ===== LOGIN ===== */
+.csi-login-container {
+    background: linear-gradient(135deg, var(--csi-blue) 0%, var(--csi-red) 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.csi-login-box {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* ===== BOTONES CSI ===== */
+.btn-primary {
+    background-color: var(--csi-blue) !important;
+    border-color: var(--csi-blue) !important;
+}
+
+.btn-primary:hover {
+    background-color: #1a3a6b !important;
+    border-color: #1a3a6b !important;
+}
+
+.btn-danger {
+    background-color: var(--csi-red) !important;
+    border-color: var(--csi-red) !important;
+}
+
+.btn-danger:hover {
+    background-color: #b02538 !important;
+    border-color: #b02538 !important;
+}
+
+.btn-warning {
+    background-color: #ffc107 !important;
+    border-color: #ffc107 !important;
+    color: #000 !important;
+}
+
+/* ===== CARDS ===== */
+.card-header {
+    font-weight: 600;
+}
+
+.card-header.bg-primary {
+    background-color: var(--csi-blue) !important;
+}
+
+.card-header.bg-danger {
+    background-color: var(--csi-red) !important;
+}
+
+/* ===== TABLAS ===== */
+.table-hover tbody tr:hover {
+    background-color: rgba(206, 45, 67, 0.05);
+}
+
+/* ===== BADGES ===== */
+.badge.bg-primary {
+    background-color: var(--csi-blue) !important;
+}
+
+.badge.bg-success {
+    background-color: #28a745 !important;
+}
+
+.badge.bg-warning {
+    background-color: #ffc107 !important;
+    color: #000 !important;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .csi-sidebar {
+        min-height: auto;
+    }
+    
+    .csi-main-content {
+        padding: 20px;
+    }
+    
+    .csi-login-box {
+        margin: 20px;
+        padding: 30px 20px;
+    }
+}
