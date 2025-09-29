@@ -1,0 +1,27 @@
+[
+    { 
+        "id": 1, 
+        "username": "admin", 
+        "password": "admin", 
+        "role": "admin", 
+        "name": "Administrador",
+        "permissions": { "full_access": true },
+        "assigned_clients": [],
+        "status": "active"
+    },
+    { 
+        "id": 2, 
+        "username": "vendedor1", 
+        "password": "1234", 
+        "role": "vendedor", 
+        "name": "Juan Vendedor",
+        "permissions": {
+            "crm": ["view", "create"],
+            "clients": ["view_assigned", "edit_own"],
+            "quotes": ["create", "edit_own"],
+            "orders": ["view", "create"]
+        },
+        "assigned_clients": [1, 2],
+        "status": "active"
+    }
+]

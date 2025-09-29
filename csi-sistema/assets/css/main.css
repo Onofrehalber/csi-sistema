@@ -1,0 +1,464 @@
+/* ===== ESTILOS WINDOWS 11 - CSI REFRIGERACIÓN ===== */
+:root {
+    /* PALETA WINDOWS 11 - COLORES SUAVIZADOS */
+    --csi-red: #D13438; /* Rojo más suave */
+    --csi-blue: #0078D4; /* Azul Windows 11 */
+    --csi-blue-dark: #106EBE; /* Azul más oscuro */
+    --csi-gray: #605E5C; /* Gris neutro */
+    --csi-gray-light: #F3F2F1; /* Fondo claro */
+    --csi-gray-dark: #323130; /* Texto oscuro */
+    --csi-white: #FFFFFF;
+    --csi-border: #E1DFDD; /* Bordes sutiles */
+    
+    /* EFECTOS WINDOWS 11 */
+    --shadow-sm: 0 1.6px 3.6px 0 rgba(0, 0, 0, 0.132), 0 0.3px 0.9px 0 rgba(0, 0, 0, 0.108);
+    --shadow-md: 0 3.2px 7.2px 0 rgba(0, 0, 0, 0.132), 0 0.6px 1.8px 0 rgba(0, 0, 0, 0.108);
+    --shadow-lg: 0 6.4px 14.4px 0 rgba(0, 0, 0, 0.132), 0 1.2px 3.6px 0 rgba(0, 0, 0, 0.108);
+}
+
+/* ===== TIPOGRAFÍA WINDOWS 11 ===== */
+.csi-body {
+    font-family: 'Segoe UI', 'Segoe UI Variable Display', system-ui, -apple-system, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--csi-gray-dark);
+    background-color: var(--csi-gray-light);
+    font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    color: var(--csi-gray-dark);
+    margin-bottom: 16px;
+}
+
+h1 { font-size: 28px; }
+h2 { font-size: 24px; }
+h3 { font-size: 20px; }
+h4 { font-size: 18px; }
+h5 { font-size: 16px; }
+h6 { font-size: 14px; }
+
+/* ===== LAYOUT PRINCIPAL ===== */
+.csi-header {
+    background-color: var(--csi-white) !important;
+    border-bottom: 1px solid var(--csi-border);
+    box-shadow: var(--shadow-sm);
+    height: 48px;
+}
+
+.csi-header .navbar-brand {
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--csi-gray-dark) !important;
+}
+
+/* ===== SIDEBAR WINDOWS 11 ===== */
+.csi-sidebar {
+    background-color: var(--csi-white);
+    min-height: calc(100vh - 48px);
+    border-right: 1px solid var(--csi-border);
+    padding: 0;
+    box-shadow: var(--shadow-sm);
+}
+
+.csi-module-list {
+    padding: 16px 0;
+}
+
+.csi-module-item {
+    padding: 12px 20px;
+    color: var(--csi-gray-dark) !important;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    display: block;
+    margin: 4px 12px;
+    border: none;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.csi-module-item:hover {
+    background-color: #F0F0F0;
+    color: var(--csi-gray-dark) !important;
+    transform: translateX(2px);
+}
+
+.csi-module-item.active {
+    background-color: var(--csi-blue);
+    color: var(--csi-white) !important;
+    font-weight: 600;
+}
+
+.csi-module-item.coming-soon {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.csi-module-item i {
+    margin-right: 12px;
+    width: 16px;
+    text-align: center;
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+.csi-main-content {
+    background-color: var(--csi-gray-light);
+    min-height: calc(100vh - 48px);
+    padding: 24px;
+}
+
+/* ===== LOGIN WINDOWS 11 ===== */
+.csi-login-container {
+    background-color: var(--csi-gray-light);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.csi-login-box {
+    background: var(--csi-white);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: var(--shadow-lg);
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid var(--csi-border);
+}
+
+.csi-login-box h2 {
+    text-align: center;
+    margin-bottom: 32px;
+    font-weight: 600;
+}
+
+/* ===== BOTONES WINDOWS 11 ===== */
+.btn {
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-primary {
+    background-color: var(--csi-blue) !important;
+    border-color: var(--csi-blue) !important;
+    color: var(--csi-white) !important;
+}
+
+.btn-primary:hover {
+    background-color: var(--csi-blue-dark) !important;
+    border-color: var(--csi-blue-dark) !important;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-danger {
+    background-color: var(--csi-red) !important;
+    border-color: var(--csi-red) !important;
+    color: var(--csi-white) !important;
+}
+
+.btn-danger:hover {
+    background-color: #C02A2E !important;
+    border-color: #C02A2E !important;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-outline-primary {
+    background-color: transparent !important;
+    border-color: var(--csi-blue) !important;
+    color: var(--csi-blue) !important;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--csi-blue) !important;
+    color: var(--csi-white) !important;
+}
+
+.btn-sm {
+    padding: 6px 12px;
+    font-size: 13px;
+    height: 28px;
+}
+
+/* ===== CARDS WINDOWS 11 ===== */
+.card {
+    border: 1px solid var(--csi-border);
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+    background-color: var(--csi-white);
+    margin-bottom: 16px;
+}
+
+.card-header {
+    background-color: var(--csi-white) !important;
+    border-bottom: 1px solid var(--csi-border);
+    padding: 16px 20px;
+    font-weight: 600;
+    border-radius: 8px 8px 0 0 !important;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-header.bg-primary {
+    background-color: var(--csi-blue) !important;
+    color: var(--csi-white) !important;
+    border: none;
+}
+
+.card-header.bg-danger {
+    background-color: var(--csi-red) !important;
+    color: var(--csi-white) !important;
+    border: none;
+}
+
+/* ===== TABLAS WINDOWS 11 ===== */
+.table {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.table th {
+    background-color: #FAF9F8;
+    border-bottom: 1px solid var(--csi-border);
+    font-weight: 600;
+    padding: 12px 16px;
+    color: var(--csi-gray-dark);
+}
+
+.table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--csi-border);
+    vertical-align: middle;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #F8F8F8;
+}
+
+.table-dark {
+    background-color: var(--csi-gray-dark);
+}
+
+.table-dark th {
+    background-color: var(--csi-gray-dark);
+    color: var(--csi-white);
+}
+
+/* ===== BADGES WINDOWS 11 ===== */
+.badge {
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 12px;
+    padding: 4px 8px;
+}
+
+.badge.bg-primary {
+    background-color: var(--csi-blue) !important;
+}
+
+.badge.bg-success {
+    background-color: #107C10 !important;
+}
+
+.badge.bg-warning {
+    background-color: #F2C811 !important;
+    color: var(--csi-gray-dark) !important;
+}
+
+.badge.bg-danger {
+    background-color: var(--csi-red) !important;
+}
+
+.badge.bg-secondary {
+    background-color: var(--csi-gray) !important;
+}
+
+/* ===== FORMULARIOS WINDOWS 11 ===== */
+.form-control {
+    border-radius: 4px;
+    border: 1px solid var(--csi-border);
+    padding: 8px 12px;
+    font-size: 14px;
+    height: 38px;
+    transition: all 0.2s ease;
+}
+
+.form-control:focus {
+    border-color: var(--csi-blue);
+    box-shadow: 0 0 0 1px var(--csi-blue);
+    outline: none;
+}
+
+.form-select {
+    border-radius: 4px;
+    border: 1px solid var(--csi-border);
+    padding: 8px 12px;
+    font-size: 14px;
+    height: 38px;
+}
+
+.form-label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--csi-gray-dark);
+    font-size: 14px;
+}
+
+/* ===== MODALES WINDOWS 11 ===== */
+.modal-content {
+    border-radius: 8px;
+    border: 1px solid var(--csi-border);
+    box-shadow: var(--shadow-lg);
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--csi-border);
+    padding: 16px 20px;
+}
+
+.modal-footer {
+    border-top: 1px solid var(--csi-border);
+    padding: 16px 20px;
+}
+
+/* ===== ALERTAS WINDOWS 11 ===== */
+.alert {
+    border-radius: 4px;
+    border: 1px solid transparent;
+    padding: 12px 16px;
+    font-size: 14px;
+}
+
+.alert-success {
+    background-color: #DFF6DD;
+    border-color: #107C10;
+    color: #107C10;
+}
+
+.alert-danger {
+    background-color: #FDE7E9;
+    border-color: var(--csi-red);
+    color: var(--csi-red);
+}
+
+.alert-warning {
+    background-color: #FFF4CE;
+    border-color: #F2C811;
+    color: var(--csi-gray-dark);
+}
+
+/* ===== INPUT GROUP ===== */
+.input-group-text {
+    background-color: #FAF9F8;
+    border: 1px solid var(--csi-border);
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* ===== NAVEGACIÓN ===== */
+.navbar-nav .nav-link {
+    color: var(--csi-gray-dark) !important;
+    font-weight: 400;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #F0F0F0;
+}
+
+/* ===== RESPONSIVE WINDOWS 11 ===== */
+@media (max-width: 768px) {
+    .csi-sidebar {
+        min-height: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--csi-border);
+    }
+    
+    .csi-main-content {
+        padding: 16px;
+    }
+    
+    .csi-login-box {
+        margin: 16px;
+        padding: 24px 16px;
+    }
+    
+    .card-body {
+        padding: 16px;
+    }
+}
+
+/* ===== UTILITARIOS ===== */
+.rounded {
+    border-radius: 4px !important;
+}
+
+.rounded-lg {
+    border-radius: 8px !important;
+}
+
+.shadow-sm {
+    box-shadow: var(--shadow-sm) !important;
+}
+
+.shadow-md {
+    box-shadow: var(--shadow-md) !important;
+}
+
+.shadow-lg {
+    box-shadow: var(--shadow-lg) !important;
+}
+
+/* ===== SCROLLBAR WINDOWS 11 ===== */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--csi-gray-light);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--csi-border);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--csi-gray);
+}
+
+/* Estilos para gestión de usuarios */
+.avatar-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.user-stats-card {
+    transition: transform 0.2s ease;
+}
+
+.user-stats-card:hover {
+    transform: translateY(-2px);
+}

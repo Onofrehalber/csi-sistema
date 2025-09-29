@@ -1,0 +1,20 @@
+{
+    "fiscal": {
+        "razon_social": "CSI Refrigeración S.A. de C.V.",
+        "rfc": "CSI250925XXX",
+        "regimen_fiscal": "Régimen General de Ley Personas Morales",
+        "direccion": "Av. Principal #123, Col. Centro",
+        "ciudad": "Ciudad de México",
+        "cp": "01000",
+        "telefono": "+52 55 1234 5678"
+    },
+    "contacto": {
+        "email": "contacto@csirefrigeracion.com",
+        "telefono": "55 1234 5678",
+        "sitio_web": "www.csirefrigeracion.com"
+    },
+    "branding": {
+        "color_principal": "#D13438",
+        "logo_url": "assets/images/logo.png"
+    }
+}

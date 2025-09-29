@@ -1,0 +1,17 @@
+{
+    "admin": {
+        "name": "Administrador",
+        "permissions": ["*"],
+        "modules": ["dashboard", "crm", "technical", "config"]
+    },
+    "gerente": {
+        "name": "Gerente Comercial",
+        "permissions": ["crm:view", "crm:edit", "reports:view"],
+        "modules": ["dashboard", "crm"]
+    },
+    "vendedor": {
+        "name": "Vendedor",
+        "permissions": ["crm:view_own", "crm:create", "clients:view_assigned"],
+        "modules": ["dashboard", "crm"]
+    }
+}
